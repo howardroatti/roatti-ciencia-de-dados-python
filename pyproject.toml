@@ -1,0 +1,30 @@
+[project]
+name = "ciencia-de-dados-com-python"
+version = "1.0.0"
+description = "Código companheiro do livro 'Ciência de Dados com Python: dos Fundamentos aos Agentes de IA Generativa'"
+authors = [{ name = "Howard Roatti" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "scikit-learn>=1.4",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+boosting = ["xgboost>=2.0"]
+deploy = ["fastapi>=0.110", "uvicorn>=0.29"]
+genai = [
+    "torch>=2.2",
+    "transformers>=4.40",
+    "sentence-transformers>=2.6",
+    "chromadb>=0.5",
+    "ollama>=0.2",
+]
+
+[tool.setuptools]
+packages = ["src"]

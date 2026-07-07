@@ -1,0 +1,16 @@
+# Dependências do núcleo — exemplos dos Módulos I a VI (executam de ponta a ponta)
+# Testado com Python 3.12
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+scikit-learn>=1.4
+scipy>=1.11
+
+# ---------------------------------------------------------------------------
+# Dependências OPCIONAIS — instale conforme o capítulo (ver requirements-extra.txt)
+#   Módulo VI (gradient boosting):  xgboost
+#   Módulo VI (deploy):             fastapi, uvicorn
+#   Módulos VIII–XI (LLMs/GenAI):   torch, transformers, sentence-transformers,
+#                                   ollama, chromadb
+# ---------------------------------------------------------------------------

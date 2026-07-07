@@ -1,0 +1,16 @@
+# Dependências opcionais dos capítulos avançados.
+# Instale apenas as do capítulo que você for executar.
+
+# Módulo VI — Gradient Boosting
+xgboost>=2.0
+
+# Módulo VI — Publicação do modelo como API
+fastapi>=0.110
+uvicorn>=0.29
+
+# Módulos VIII a XI — Transformers, LLMs, IA Generativa e Agentes
+torch>=2.2
+transformers>=4.40
+sentence-transformers>=2.6
+chromadb>=0.5
+ollama>=0.2
