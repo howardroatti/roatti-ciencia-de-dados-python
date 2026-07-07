@@ -1,5 +1,5 @@
 [project]
-name = "ciencia-de-dados-com-python"
+name = "roatti-ciencia-de-dados-python"
 version = "1.0.0"
 description = "Código companheiro do livro 'Ciência de Dados com Python: dos Fundamentos aos Agentes de IA Generativa'"
 authors = [{ name = "Howard Roatti" }]
