@@ -4,8 +4,8 @@ Código-fonte, notebooks e scripts que acompanham o livro
 **_Ciência de Dados com Python: dos Fundamentos aos Agentes de IA Generativa_**,
 de **Howard Roatti**.
 
-Todo o material aqui é **reproduzível**: os exemplos dos Módulos I a VI executam de
-ponta a ponta sobre conjuntos de dados públicos, e as figuras de resultado do livro
+Todo o material aqui é **reproduzível**: os exemplos executam de
+ponta a ponta com dados fictícios gerados por código ou conjuntos embutidos do scikit-learn, e as figuras de resultado do livro
 são geradas por estes scripts.
 
 ## Estrutura
@@ -15,9 +15,9 @@ codigo/
 ├── notebooks/          Um notebook por módulo (código do livro, executável)
 ├── scripts_figuras/    Scripts que regeneram as figuras de resultado do livro
 ├── data/               Conjuntos de dados de exemplo (+ instruções para os externos)
-├── src/                Utilidades compartilhadas
-├── requirements.txt    Dependências do núcleo (Módulos I–VI)
-├── requirements-extra.txt  Dependências opcionais (boosting, deploy, LLMs)
+├── src/                Geradores de dados fictícios (dados_sinteticos_*.py)
+├── requirements.txt    Dependências do núcleo (Módulos I–VI e Anexo A)
+├── requirements-extra.txt  Dependências opcionais (boosting, torch, agentes, LLMs)
 ├── pyproject.toml
 └── LICENSE             MIT
 ```
@@ -32,8 +32,8 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Para os capítulos avançados (Módulo VI com XGBoost/deploy e Módulos VIII–XI com
-LLMs), instale conforme a necessidade:
+Para os capítulos que usam pacotes adicionais (XGBoost e Flask no VI, `torch` no VII,
+`fastapi`/`pydantic` nos X e XI, modelos reais nos IX–XI), instale conforme a necessidade:
 
 ```bash
 pip install -r requirements-extra.txt
@@ -54,20 +54,32 @@ pip install -r requirements-extra.txt
 
 Os exemplos usam principalmente conjuntos **embutidos no scikit-learn**
 (`load_iris`, `load_breast_cancer`, `load_diabetes`) e alguns arquivos de exemplo em
-`data/`. Bases externas (Kaggle) que não podem ser redistribuídas têm instruções de
+`data/`. Os exemplos usam dados fictícios gerados por código (veja `data/README.md`); bases externas, quando citadas, têm instruções de
 download em [`data/README.md`](data/README.md).
 
 ## Mapa de módulos
 
-| Módulo | Tema | Executa localmente? |
+Cada módulo do livro tem um notebook com o **código** (as explicações estão no livro). Todos
+os exemplos usam dados fictícios gerados por código (`src/dados_sinteticos_*.py`) ou
+conjuntos embutidos do scikit-learn.
+
+| Módulo | Notebook | Executa localmente? |
 |---|---|---|
-| I–V | Python, NumPy, Pandas, visualização | ✅ Sim |
-| VI | Machine Learning (scikit-learn) | ✅ Sim (XGBoost opcional) |
-| VII | Deep Learning (conceitual) | — teórico |
-| VIII | Transformers e LLMs | ⚙️ Requer `torch`/`transformers` |
-| IX | IA Generativa e RAG | ⚙️ Requer modelos locais (Ollama/HF) |
-| X | Agentes inteligentes | ⚙️ Requer LLM local |
-| XI | IA responsável e produção | ⚙️ Parcial |
+| I Python | `notebooks/01-modulo-i.ipynb` | ✅ Sim (web scraping com cópia local, sem rede) |
+| II NumPy | `notebooks/02-modulo-ii.ipynb` | ✅ Sim |
+| III Pandas | `notebooks/03-modulo-iii.ipynb` | ✅ Sim |
+| IV Aquisição de dados | `notebooks/04-modulo-iv.ipynb` | ✅ Sim (cria arquivos de exemplo) |
+| V Visualização | `notebooks/05-modulo-v.ipynb` | ✅ Sim |
+| VI Machine Learning | `notebooks/06-modulo-vi.ipynb` | ✅ Sim (XGBoost e Flask opcionais) |
+| VII Deep Learning | `notebooks/07-modulo-vii.ipynb` | ✅ Sim, em CPU (requer `torch`) |
+| VIII Transformers e LLMs | `notebooks/08-modulo-viii.ipynb` | ✅ Sim, mecanismo em NumPy |
+| IX IA Generativa e RAG | `notebooks/09-modulo-ix.ipynb` | ✅ RAG offline; células com modelos reais são opcionais |
+| X Agentes | `notebooks/10-modulo-x.ipynb` | ✅ Agente do zero offline; `ollama` opcional |
+| XI IA responsável e LLMOps | `notebooks/11-modulo-xi.ipynb` | ✅ Laboratório offline (testes com `TestClient`) |
+| Anexo A | `notebooks/90-anexo-a-resolucoes.ipynb` | ✅ Sim (célula de preparação cria dados de exemplo) |
+
+As células marcadas com `# OPCIONAL: requer ...` dependem de pacotes ou modelos que não
+fazem parte do núcleo (veja `requirements-extra.txt`).
 
 ## Licença
 

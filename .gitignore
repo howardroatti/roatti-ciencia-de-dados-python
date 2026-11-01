@@ -24,3 +24,14 @@ data/*.gz
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Arquivos criados ao executar os notebooks
+notebooks/*.csv
+notebooks/*.json
+notebooks/*.xml
+notebooks/*.parquet
+notebooks/*.txt
+notebooks/*.png
+notebooks/*.db
+notebooks/static/
+notebooks/exemplos/

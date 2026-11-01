@@ -1,16 +1,19 @@
-# Dependências do núcleo — exemplos dos Módulos I a VI (executam de ponta a ponta)
-# Testado com Python 3.12
+# Dependências do núcleo — exemplos dos Módulos I a VI e do Anexo A
+# Testado com Python 3.12 (numpy 2.5, pandas 3.1, matplotlib 3.11, scikit-learn 1.9)
 numpy>=1.26
 pandas>=2.2
-matplotlib>=3.8
+matplotlib>=3.9          # `tick_labels` em boxplot exige >= 3.9
 seaborn>=0.13
 scikit-learn>=1.4
 scipy>=1.11
+beautifulsoup4>=4.12     # Módulo I (web scraping)
+lxml>=5.0                # Módulo IV (read_xml / read_html)
+pyarrow>=15.0            # Anexo A (to_parquet)
 
 # ---------------------------------------------------------------------------
-# Dependências OPCIONAIS — instale conforme o capítulo (ver requirements-extra.txt)
-#   Módulo VI (gradient boosting):  xgboost
-#   Módulo VI (deploy):             fastapi, uvicorn
-#   Módulos VIII–XI (LLMs/GenAI):   torch, transformers, sentence-transformers,
-#                                   ollama, chromadb
+# Dependências OPCIONAIS — veja requirements-extra.txt
+#   Módulo VI (gradient boosting, API):  xgboost, flask
+#   Módulo VII (deep learning):          torch
+#   Módulos X e XI (agentes, LLMOps):    pydantic, fastapi, httpx
+#   Módulos IX–XI (LLMs reais):          transformers, sentence-transformers, ollama, chromadb
 # ---------------------------------------------------------------------------
