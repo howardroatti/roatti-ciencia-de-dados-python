@@ -2,7 +2,9 @@
 """Regenera, a partir de código reprodutível, as figuras de RESULTADO do Módulo VI.
 
 Todas as figuras saem de execuções reais do scikit-learn sobre conjuntos públicos
-(Iris, Breast Cancer, Diabetes). Rode com:  python figuras_resultado_m6.py
+(Iris, Breast Cancer, Diabetes). As figuras de seleção de características (Random Forest sobre imóveis fictícios)
+e dos dados sintéticos estão em figuras_dados_sinteticos_m6.py.
+Rode com:  python figuras_resultado_m6.py
 
 As imagens são salvas em ../../figuras (pasta de figuras do livro) e substituem
 capturas/gráficos de terceiros ou do autor por versões reprodutíveis.
@@ -245,7 +247,7 @@ def regressao():
 if __name__ == "__main__":
     fronteiras_classificadores()
     knn_erro_por_k()
-    rf_importancias()
+    # rf_importancias() -- substituída por figuras_dados_sinteticos_m6.py (imóveis fictícios)
     rf_erro_por_arvores()
     arvore_plot()
     bcancer_pca()
