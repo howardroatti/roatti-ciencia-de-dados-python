@@ -14,19 +14,13 @@ Esta pasta reúne os dados usados nos exemplos do livro.
 Vários exemplos usam **conjuntos embutidos do scikit-learn** — não precisam de
 arquivo: `load_iris()`, `load_breast_cancer()`, `load_diabetes()`.
 
-## Não incluídos (baixe conforme a licença de cada um)
+## Dados fictícios gerados por código
 
-Alguns exemplos citam bases que **não podem ser redistribuídas** aqui por questões
-de licença. Baixe-as na fonte e coloque em `data/` (ou `data/kaggle/`):
+Os exemplos dos Módulos III, V e VI **não dependem de bases externas**: usam conjuntos
+**fictícios**, gerados por código com semente fixa (resultados reproduzíveis), em
+`src/dados_sinteticos_m3m5.py` e `src/dados_sinteticos_m6.py`. Eles imitam a estrutura
+de bases conhecidas (passageiros, clientes de cartão, vendas de casas, imóveis,
+empréstimos), mas **nenhum dado real é redistribuído** e não há restrição de licença.
 
-| Arquivo esperado | Onde obter |
-|---|---|
-| `DataSets/titanic_treino.csv` | Kaggle — *Titanic: Machine Learning from Disaster* (`train.csv`) |
-| `DataSets/Clientes_Cartao_Credito.csv` | Kaggle — *Default of Credit Card Clients* |
-| `DataSets/house_sales.csv` | Kaggle — *House Sales* |
-| `Melbourne-House-Snapshot/melb_data.csv` | Kaggle — *Melbourne Housing Snapshot* |
-| `loan_data.csv.gz` | Kaggle — *Loan Data* |
-
-Onde a base específica não é essencial (o exemplo ilustra uma **técnica**, não os
-dados), você pode substituí-la por `load_iris`/`load_breast_cancer`/`load_diabetes`
-sem prejuízo pedagógico.
+Se quiser praticar com bases reais, baixe-as na fonte e **verifique a licença de cada
+uma** antes de qualquer uso além do estudo pessoal.
